@@ -71,7 +71,7 @@ const setup = (...params) => {
         //общая сумма без скидки
         total += item.price
         //общая сумма сo скидкой
-        totalSale = total * discount / 100
+        totalSale = total - (total * discount / 100)
         arr_sale.push({
             name: item.name,
             price: item.price - (discount * item.price / 100)
